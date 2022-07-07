@@ -21,7 +21,7 @@ class _LogInScreenState extends State<LogInScreen> {
         title: const Text('Login'),
         centerTitle: true,
       ),
-      body: BlocConsumer<LoginBloc, AuthState>(
+      body: BlocConsumer<AuthBloc, AuthState>(
         listener: (BuildContext context, state) {
           if (state is AuthError) {
             buildErrorLayout();
@@ -70,7 +70,7 @@ class _LogInScreenState extends State<LogInScreen> {
           ),
           ElevatedButton(
               onPressed: () {
-                BlocProvider.of<LoginBloc>(context)
+                BlocProvider.of<AuthBloc>(context)
                     .add(Login(userName.text, password.text));
               },
               child: const Text('Login'))

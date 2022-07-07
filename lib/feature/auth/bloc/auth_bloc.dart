@@ -5,8 +5,8 @@ import 'package:meta/meta.dart';
 part 'auth_event.dart';
 part 'auth_state.dart';
 
-class LoginBloc extends Bloc<AuthEvent, AuthState> {
-  LoginBloc() : super(AuthInitial()) {
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  AuthBloc() : super(AuthInitial()) {
     on<AuthEvent>((event, emit) async{
      if(event is Login){
        if(event.userName.isEmpty|| event.password.isEmpty){

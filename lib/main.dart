@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
           create: (BuildContext context) {
-            return LoginBloc();
+            return AuthBloc();
           },
           child: const LogInScreen()),
     );
