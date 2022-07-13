@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:login_bloc/feature/auth/bloc/auth_bloc.dart';
-import 'package:login_bloc/feature/auth/widget/login_screen.dart';
-import 'package:login_bloc/feature/dashboarc/widget/dashboard_screen.dart';
+import 'package:login_bloc/feature/story/widget/story_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,11 +16,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
-          create: (BuildContext context) {
-            return AuthBloc();
-          },
-          child: const LogInScreen()),
+      // home: BlocProvider(
+      //     create: (BuildContext context) {
+      //       return AuthBloc();
+      //     },
+      //     child: const LogInScreen()),
+      home: const StoryScreen(),
     );
   }
 }
