@@ -154,13 +154,13 @@ class _FullScreenState extends State<FullScreen> {
         print('storyIndex:${storyIndex}');
 
         ///
-        if (storyIndex!= usersTotalStory) {
-          Navigator.of(context).pop();
-
-           //storyIndex++;
-        } else {
+        if (storyIndex < usersTotalStory - 1) {
           //Navigator.of(context).pop();
+
           storyIndex++;
+        } else {
+          Navigator.of(context).pop();
+          //storyIndex++;
         }
         //storyIndex++;
       });
